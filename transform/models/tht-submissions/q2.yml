@@ -1,0 +1,22 @@
+models:
+  - name: taiwan_vendors_ordered_by_cust_count
+    description: >
+      Answer to Q2 of take home test
+    meta:
+      owner: aengus.leman@gmail.com
+    columns:
+      - vendor_name
+        description: Name of vendors in Taiwan (PRIMARY KEY)
+        tests:
+          - unique
+          - not_null
+
+      - customer_count
+        description: Number of customers who patronized that vendor (Ordered from highest to lowest)
+        tests:
+          - not_null
+
+      - total_gmv
+        description: GMV for each Taiwanese vendor.
+        tests:
+          - not null

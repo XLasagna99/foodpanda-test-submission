@@ -1,0 +1,26 @@
+models:
+  - name: top_2_vendors_per_country_for_each_year
+    description: >
+      Answer to Q4 of take home test
+    meta:
+      owner: aengus.leman@gmail.com
+    columns:
+      - year
+        description: Year in ISO 8601 format.
+        tests:
+          - not_null
+
+      - country_name
+        description: Name of the country.
+        tests:
+          - not_null
+
+      - vendor_name
+        description: Names of the top 2 vendors for each country.
+        tests:
+          - not_null
+
+      - total_gmv
+        description: GMV for each of the top 2 vendors.
+        tests:
+          - not_null

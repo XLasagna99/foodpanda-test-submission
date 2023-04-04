@@ -1,0 +1,22 @@
+models:
+  - name: top_active_vendors_by_gmv_country
+    description: >
+      Answer to Q3 of take home test
+    meta:
+      owner: aengus.leman@gmail.com
+     columns:
+      - country_name
+        description: Name of country (PRIMARY KEY).
+        tests:
+          - unique
+          - not_null
+
+      - vendor_name
+        description: Name of the top active vendor by GMV in each country.
+        tests:
+          - not_null
+
+      - total_gmv
+        description: GMV for each top active vendor.
+        tests:
+          - not_null
