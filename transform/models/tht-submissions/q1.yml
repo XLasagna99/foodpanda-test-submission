@@ -1,0 +1,17 @@
+models:
+  - name: total_gmv_by_country
+    description: >
+      Answer to Q1 of take home test
+    meta:
+      owner: aengus.leman@gmail.com
+    columns:
+      - country_name
+        description: Name of country (PRIMARY KEY)
+        tests:
+          - unique
+          - not_null
+          
+      - total_gmv
+        description: GMV calculated for each country.
+        tests:
+          -not_null
